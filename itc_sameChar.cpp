@@ -1,4 +1,5 @@
-char itc_sameChar(string str) {
+char itc_sameChar(string str) 
+{
     long times = 0;
     long times2 = 0;
     char ch1 = str[times];
