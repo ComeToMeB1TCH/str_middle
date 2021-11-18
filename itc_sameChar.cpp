@@ -1,13 +1,17 @@
-#include "middle_str.h"
-
-char itc_sameChar(string str)
-{
-	long long len = itc_len(str);
-	for (int i = 0; i < len; i++) {
-		for (int L = 1; L < len; L++) {
-			if ((L != i) && (str[i] == str[L])){
-				return str[i];
-			}
-		}
-	}
+char itc_sameChar(string str) {
+    long times = 0;
+    long times2 = 0;
+    char ch1 = str[times];
+    char ch2 = str[times2];
+    while (ch1 != '\0') {
+        ch1 = str[times];
+        while (ch2 != '\0') {
+            ch2 = str[times2];
+            if (times != times2 && ch1 == ch2)
+                return ch1;
+            times2++;
+        }
+        times++;
+    }
+    return ch1;
 }
